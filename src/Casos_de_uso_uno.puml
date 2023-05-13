@@ -55,6 +55,11 @@ Usuario -- (Cerrar sesión)
 Administrador -- (Registrar usuario)
 Administrador -- (Instalar programa)
 Usuario <|- Administrador
-
-
+@enduml
+@startuml
+left to right direction
+Ciudadano --(Registrar entrada)
+Ciudadano <|- :Ciudadano extranjero:
+:Ciudadano extranjero: -- (Tomar huellas)
+(Registrar entrada) <. (Tomar huellas) : <<extend>>
 @enduml
