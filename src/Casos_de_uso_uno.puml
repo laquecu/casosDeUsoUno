@@ -45,3 +45,16 @@ Cliente -- (Confirmar)
 (Pagar) <|-- (Pagar con tarjeta)
 (Pagar) <|-- (Pagar con transferencia)
 @enduml
+@startuml
+left to right direction
+
+Usuario -- (Iniciar sesión)
+Usuario -- (Recuperar contraseña)
+Usuario -- (Modificar contraseña)
+Usuario -- (Cerrar sesión)
+Administrador -- (Registrar usuario)
+Administrador -- (Instalar programa)
+Usuario <|- Administrador
+
+
+@enduml
