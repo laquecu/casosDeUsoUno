@@ -1,3 +1,28 @@
 @startuml
-
+left to right direction
+Cliente -- (Mostrar menú)
+@enduml
+@startuml
+left to right direction
+rectangle {
+(Mostrar menú)
+(Pedir comida)
+}
+Cliente -- (Mostrar menú)
+Cliente -- (Pedir comida)
+(Mostrar menú) -- Restaurante
+(Entregar comida) -- Restaurante
+@enduml
+@startuml
+left to right direction
+Cliente -- (Confirmar pedido)
+Cliente -- (Cancelar pedido)
+(Cancelar pedido) ..> (Devolver cambio) : <<include>>
+(Confirmar pedido) ..> (Devolver cambio) : <<include>>
+@enduml
+@startuml
+left to right direction
+Cliente -- (Reservar vuelo)
+:Cliente VIP: -- (Elegir asientos)
+Cliente <|- :Cliente VIP:
 @enduml
