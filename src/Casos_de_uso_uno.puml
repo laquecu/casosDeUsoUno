@@ -63,3 +63,19 @@ Ciudadano <|- :Ciudadano extranjero:
 :Ciudadano extranjero: -- (Tomar huellas)
 (Registrar entrada) <. (Tomar huellas) : <<extend>>
 @enduml
+@startuml
+left to right direction
+usecase UC1 as "Sacar dinero
+----
++ solicitud hecha
+
+"
+usecase UC2 as "Retener tarjeta
+
+
+    "
+UC1 <.. UC2 : <<extend>>
+note "Description\n\n condición:\n  { historia sospechosa }\npunto de extensión:\n  solicitud hecha" as n1
+n1 -- UC2
+
+@enduml
